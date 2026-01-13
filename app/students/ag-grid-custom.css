@@ -1,0 +1,219 @@
+/* AG Grid 自定义样式 - 改善颜色和文字对比度 */
+
+.ag-theme-alpine {
+  --ag-background-color: #ffffff;
+  --ag-header-background-color: #f7fafc;
+  --ag-odd-row-background-color: #fafafa;
+  --ag-header-foreground-color: #2d3748;
+  --ag-foreground-color: #1a202c;
+  --ag-border-color: #e2e8f0;
+  --ag-row-hover-color: #edf2f7;
+  --ag-selected-row-background-color: #bee3f8;
+  --ag-range-selection-background-color: rgba(66, 153, 225, 0.1);
+  --ag-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --ag-font-size: 14px;
+  --ag-header-height: 42px;
+  --ag-row-height: 44px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: visible;
+}
+
+/* 确保 AG Grid 容器占满父容器 */
+.ag-theme-alpine .ag-root-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: visible;
+}
+
+.ag-theme-alpine .ag-root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+/* 确保表格主体可以滚动 */
+.ag-theme-alpine .ag-body-viewport {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: auto;
+  min-height: 0;
+}
+
+/* 确保表格主体容器正确显示 */
+.ag-theme-alpine .ag-body {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* 确保表格可以横向滚动 */
+.ag-theme-alpine .ag-body-horizontal-scroll {
+  overflow-x: auto;
+}
+
+/* 确保表格可以纵向滚动 */
+.ag-theme-alpine .ag-center-cols-viewport {
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.ag-theme-alpine .ag-header {
+  font-weight: 600;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.ag-theme-alpine .ag-header-cell {
+  color: #2d3748;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ag-theme-alpine .ag-cell {
+  color: #1a202c;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 8px 12px;
+}
+
+.ag-theme-alpine .ag-row {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.ag-theme-alpine .ag-row:hover {
+  background-color: #f7fafc !important;
+}
+
+.ag-theme-alpine .ag-paging-panel {
+  background-color: #f7fafc;
+  border-top: 1px solid #e2e8f0;
+  padding: 12px;
+  color: #4a5568;
+  font-size: 13px;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+
+.ag-theme-alpine .ag-paging-button {
+  color: #4299e1;
+  font-weight: 500;
+}
+
+.ag-theme-alpine .ag-paging-button:hover {
+  background-color: #edf2f7;
+  color: #2b6cb0;
+}
+
+.ag-theme-alpine .ag-paging-button.ag-disabled {
+  color: #a0aec0;
+  opacity: 0.5;
+}
+
+.ag-theme-alpine .ag-icon {
+  color: #4a5568;
+}
+
+.ag-theme-alpine .ag-icon:hover {
+  color: #2d3748;
+}
+
+/* 改善按钮在表格中的显示 */
+.ag-theme-alpine .ag-cell button {
+  font-weight: 500;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+/* 改善筛选器样式 */
+.ag-theme-alpine .ag-filter-toolpanel-header {
+  background-color: #f7fafc;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.ag-theme-alpine .ag-filter-toolpanel-body {
+  background-color: #ffffff;
+}
+
+/* 改善排序图标 */
+.ag-theme-alpine .ag-header-cell-menu-button:hover {
+  background-color: #edf2f7;
+}
+
+/* 右键菜单样式优化 */
+.ag-theme-alpine .ag-menu {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 4px 0;
+  min-width: 160px;
+}
+
+.ag-theme-alpine .ag-menu-option {
+  padding: 8px 16px;
+  color: #1a202c;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.ag-theme-alpine .ag-menu-option:hover {
+  background-color: #f7fafc;
+  color: #2d3748;
+}
+
+.ag-theme-alpine .ag-menu-option.ag-menu-option-active {
+  background-color: #edf2f7;
+}
+
+/* 危险操作（删除）样式 */
+.ag-theme-alpine .ag-menu-item-danger {
+  color: #e53e3e !important;
+}
+
+.ag-theme-alpine .ag-menu-item-danger:hover {
+  background-color: #fed7d7 !important;
+  color: #c53030 !important;
+}
+
+/* 修复分页下拉菜单的布局问题 */
+.ag-theme-alpine .ag-paging-panel .ag-paging-page-size {
+  position: relative;
+  z-index: 10;
+  overflow: visible;
+}
+
+.ag-theme-alpine .ag-select {
+  position: relative;
+  z-index: 10;
+  overflow: visible;
+}
+
+/* 确保下拉菜单不被裁剪 */
+.ag-theme-alpine .ag-popup {
+  z-index: 1000 !important;
+  position: fixed !important;
+}
+
+.ag-theme-alpine .ag-popup-child {
+  z-index: 1000 !important;
+}
+
+/* 修复分页面板容器的 overflow 问题 */
+.ag-theme-alpine .ag-paging-panel-wrapper {
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+}
